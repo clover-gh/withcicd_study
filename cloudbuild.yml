@@ -3,23 +3,23 @@ steps:
   args: 
   - 'build'
   - '-t'
-  - 'gcr.io/$PROJECT_ID/withcicd_study:latest'
+  - 'gcr.io/$PROJECT_ID/withcicd-study:latest'
   - '--cache-from'
-  - 'gcr.io/$PROJECT_ID/withcicd_study:latest'
+  - 'gcr.io/$PROJECT_ID/withcicd-study:latest'
   - '.'
 
 - name: 'gcr.io/cloud-builders/docker'
   args:
   - 'push'
-  - 'gcr.io/$PROJECT_ID/withcicd_study:latest'
+  - 'gcr.io/$PROJECT_ID/withcicd-study:latest'
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: 
   - "beta"
   - "run"
   - "deploy"
-  - "withcicd_study"
-  - "--image=gcr.io/$PROJECT_ID/withcicd_study"
+  - "withcicd-study"
+  - "--image=gcr.io/$PROJECT_ID/withcicd-study"
   - "--platform=managed"
   - "--region=asia-northeast1"
   - "--allow-unauthenticated"
