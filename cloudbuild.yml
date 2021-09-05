@@ -22,6 +22,6 @@ steps:
   - "--platform=managed"
   - "--region=asia-northeast1"
   - "--allow-unauthenticated"
-  - "--memory=64Mi"
-  - "--service-account=cloudrunbuilder@clvflf-cloud-run-study.iam.gserviceaccount.com"  
+  - "--memory=128Mi"
+#  - "--service-account=cloudrunbuilder@clvflf-cloud-run-study.iam.gserviceaccount.com"  
 
